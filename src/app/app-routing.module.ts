@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ListComponent } from './screens/list/list.component';
+import { CartdetailComponent } from './screens/cartdetail/cartdetail.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'list',
+    component: ListComponent,
+  },
+  {
+    path: 'cartdetail',
+    component: CartdetailComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
