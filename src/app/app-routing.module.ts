@@ -5,6 +5,11 @@ import { CartdetailComponent } from './screens/cartdetail/cartdetail.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'list',
+    pathMatch: 'full'
+  },
+  {
     path: 'list',
     component: ListComponent,
   },
