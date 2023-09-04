@@ -14,5 +14,5 @@ export class ProdutsService {
 
   public getData(): Observable<any> {
     return this.http.get<any>(`${this.API_URI}/products`);
-  }
+  };
 }

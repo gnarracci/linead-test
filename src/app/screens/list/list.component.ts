@@ -26,4 +26,8 @@ export class ListComponent implements OnInit{
     )
   }
 
+  addToCart(item: any) {
+    console.log(item);
+  }
+
 }
