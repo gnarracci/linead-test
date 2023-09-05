@@ -1,12 +1,27 @@
-<ion-content class="ion-padding">
-  <ion-card>
+<ion-content>
+  <ion-card *ngFor="let items of myCart$ | async">
+    <br>
+    <br>
+    <img  [src]="items.image" />
     <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Checkout</ion-card-subtitle>
+      <ion-card-title>{{ items.title }}</ion-card-title>
+      <ion-card-subtitle>{{ items.description }} </ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
+      <ion-item>
+        <ion-label>
+          <h2>Price ${{ items.price }}</h2>
+        </ion-label>
+      </ion-item>
     </ion-card-content>
+    <ion-button color="dark" expand="block" (click)="deleteItem(items.id!)">Delete Item <ion-icon name="trash-outline"></ion-icon></ion-button>
   </ion-card>
+  <hr>
+  <br>
+  <hr>
+  <h2>Total Summary </h2>
+  <h3>Items Quantity: {{ qty() }}</h3>
+  <h1>TOTAL: {{ totalCart() }}</h1>
+
 </ion-content>

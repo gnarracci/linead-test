@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Items } from 'src/app/interfaces/items';
 import { ProdutsService } from 'src/app/services/produts.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ProdutsService } from 'src/app/services/produts.service';
 })
 export class ListComponent implements OnInit{
 
-  data: any[] = [];
+  data:Items[] = [];
 
   constructor(private productsService: ProdutsService) {}
 
@@ -26,8 +26,8 @@ export class ListComponent implements OnInit{
     )
   }
 
-  addToCart(item: any) {
-    console.log(item);
+  addToCart(item: Items) {
+    return this.productsService.addItem(item);
   }
 
 }
