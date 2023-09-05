@@ -49,7 +49,7 @@ export class ProdutsService {
   }
 
   totalCart() {
-    const total = this.myList.reduce((acc, items) => { return acc + (items?.price?); }, 0)
-    return total
+    //const total = this.myList.reduce((acc, items) => { return acc + (items?.price?); }, 0)
+    //eturn total
   }
 }
