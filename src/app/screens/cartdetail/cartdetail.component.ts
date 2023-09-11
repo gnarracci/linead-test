@@ -17,6 +17,7 @@ export class CartdetailComponent implements OnInit{
 
   ngOnInit(): void {
     this.qty();
+    this.totalCart();
   }
 
   qty() {
@@ -29,7 +30,8 @@ export class CartdetailComponent implements OnInit{
   }
 
   totalCart() {
-    this.productsService.totalCart();
+    const res = this.productsService.totalCart();
+    return res;
   }
 
 
